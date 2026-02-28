@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tuition Enquiry</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; }
+    label { display: block; margin-top: 10px; }
+    input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; }
+    button { margin-top: 16px; padding: 10px 16px; }
+  </style>
+</head>
+<body>
+  <h1>Tuition Enquiry Form</h1>
+  <form method="POST" action="/enquiry">
+    <label>Parent name
+      <input type="text" name="parent_name" required>
+    </label>
+
+    <label>Parent email
+      <input type="email" name="parent_email" required>
+    </label>
+
+    <label>Child name
+      <input type="text" name="child_name">
+    </label>
+
+    <label>Child age
+      <input type="number" name="child_age" min="3" max="25">
+    </label>
+
+    <label>Year group
+      <input type="text" name="year_group" placeholder="e.g. Year 9">
+    </label>
+
+    <label>Subject
+      <select name="subject" required>
+        <option value="Maths">Maths</option>
+        <option value="English">English</option>
+        <option value="Science">Science</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+
+    <label>Level
+      <select name="level">
+        <option value="Primary">Primary</option>
+        <option value="KS3">KS3</option>
+        <option value="GCSE">GCSE</option>
+        <option value="A-level">A-level</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+
+    <label>What are you hoping to achieve?
+      <textarea name="goals" rows="3" placeholder="e.g. Move from grade 4 to 7 in GCSE Maths"></textarea>
+    </label>
+
+    <label>Preferred days / times
+      <textarea name="availability" rows="2"></textarea>
+    </label>
+
+    <label>Anything else we should know?
+      <textarea name="other_notes" rows="3"></textarea>
+    </label>
+
+    <button type="submit">Submit enquiry</button>
+  </form>
+</body>
+</html>
