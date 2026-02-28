@@ -3,8 +3,10 @@ import smtplib
 from email.mime.text import MIMEText
 from groq import Groq
 
+import os
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 # Hardcoded config
-client = Groq(api_key="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")
+#client = Groq(api_key="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")
 TUTOR_EMAIL = "zxkxriya@gmail.com"
 FROM_EMAIL = "zakxriya.ali@gmail.com"
 FROM_EMAIL_PASSWORD = "uuoq hlrl yryu ndll"  # ← Fix with Gmail App Password later
@@ -81,3 +83,4 @@ Notes: {other_notes}
 
 if __name__ == "__main__":
     app.run(debug=True)
+
